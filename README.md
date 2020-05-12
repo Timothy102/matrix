@@ -13,7 +13,8 @@ I hope this library offers you to dig deeper into the world of linear algebra an
 Let's take a look at some initializing concepts.
 
 Downloading the package should be fairly simple. Run the code below in your directory terminal.
-```go get github.com/timothy102/matrix
+```
+go get github.com/timothy102/matrix
 ```
 Once you have done that, import the package in your go file.
 ```
@@ -47,4 +48,9 @@ result:=mat1.Add(mat2)
 
 //PrintByRow will print the matrix by row if you wish to see it in full display.
 result.PrintByRow()
+```
+And the output:
+```
+[7.2,4.2,5.3]
+[9.4,8.5,8.6]
 ```
