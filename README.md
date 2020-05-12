@@ -27,7 +27,7 @@ import "github.com/timothy102/matrix"
 ```
 If you prefer not to write matrix all the time or for some other reason you want to change the name, type this.
 ```
- import name "github.com/timothy102/matrix"
+import name "github.com/timothy102/matrix"
 ```
 Let's take a look at a simple matrix addition
  ```
@@ -40,8 +40,8 @@ Let's take a look at a simple matrix addition
   {4.3,0.2,2.3},
   {5.4,6.5,7.6},
   }
-  //you can also invoke the matrix struct itself of course.
-  //mat:=matrix.Matrix{}
+ //you can also invoke the matrix struct itself of course.
+ //mat:=matrix.Matrix{}
 
   mat1,err:=matrix.NewMatrix(slice1,3,2)
   //do error handling
