@@ -61,3 +61,14 @@ Let's take a look at a simple matrix addition
   [9.4,8.5,8.6]]
   
  ```
+ 
+ Same applies for vectors.
+ 
+ ```
+ vector:=NewVector([]float64{2.0,4.0,3.2})
+ vector.MultipliedByScalar(2.0)
+ ```
+ Output:
+ ```
+ [4.0,8.0,6.4]
+ ```
