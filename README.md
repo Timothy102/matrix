@@ -10,6 +10,10 @@ This Go Linear Algebra Library is based on the popular Mathematics for Machine L
 I hope this library offers you to dig deeper into the world of linear algebra and to apply it to some cool machine learning concepts.
 
 
+
+
+
+
 Let's take a look at some initializing concepts.
 
 Downloading the package should be fairly simple. Run the code below in your directory terminal.
