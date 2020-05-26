@@ -9,7 +9,7 @@ This Go Linear Algebra Library is based on the popular Mathematics for Machine L
 
 
 I hope this library offers you to dig deeper into the world of linear algebra and to apply it to some cool machine learning concepts.
-
+Looking forward for feedback!
 
 
 
@@ -40,14 +40,15 @@ Let's take a look at a simple matrix addition
   {4.3,0.2,2.3},
   {5.4,6.5,7.6},
   }
- //you can also invoke the matrix struct itself of course.
- //mat:=matrix.Matrix{}
 
   mat1,err:=matrix.NewMatrix(slice1,3,2)
   //do error handling
   mat2,err:=matrix.NewMatrix(slice2,3,2)
   //do error handling
-
+  
+ //you can also invoke the matrix struct itself of course.
+ //mat:=matrix.Matrix{}
+ 
   //Addition is simple
   result:=mat1.Add(mat2)
 
