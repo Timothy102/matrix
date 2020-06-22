@@ -284,6 +284,16 @@ func (m Matrix) Inverse2x2() Matrix {
 	return result
 }
 
+//MapFunc applies f to every element
+func (m Matrix) MapFunc(f func(x float64) float64) Matrix {
+	for i := 0; i < m.NumberOfRows(); i++ {
+		for j := 0; j < m.NumberOfColumns(); j++ {
+			m.slice[i][j] = f(m.slice[i][j])
+		}
+	}
+	return m
+}
+
 //EinsteinConvention returns the multiplication matrix of two matrices, given that rows of A matches columns of B.
 //According to this convention, when an index variable appears twice in a single term and is not otherwise defined, it implies summation of that term over all the values of the index.
 func (m Matrix) EinsteinConvention(m2 Matrix) Matrix {
