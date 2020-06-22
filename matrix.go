@@ -136,6 +136,17 @@ func FromArray(arr []float64) Matrix {
 	}
 	return m
 }
+
+//ToArray returns the matrix in array form.
+func (m Matrix) ToArray() []float64 {
+	var arr []float64
+	for i := 0; i < m.NumberOfRows(); i++ {
+		for j := 0; j < m.NumberOfColumns(); j++ {
+			arr = append(arr, m.slice[i][j])
+		}
+	}
+	return arr
+}
 //Add performs elementary matrix addition
 func (m Matrix) Add(mat Matrix) Matrix {
 	var product Matrix
