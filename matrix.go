@@ -414,3 +414,13 @@ func Quadratic(a, b, c float64) (float64, float64) {
 	x2 := (-b - math.Sqrt(disc)) / 2 * a
 	return x1, x2
 }
+
+//Sigmoid returns the sigmoid of X.
+func Sigmoid(x float64) float64 {
+	return 1 / (1 + math.Exp(-x))
+}
+
+//SigmoidPrime returns the derivative of the Sigmoid. 
+func SigmoidPrime(x float64) float64 {
+	return sigmoid(x) * (1 - sigmoid(x))
+}
