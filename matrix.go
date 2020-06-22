@@ -103,6 +103,29 @@ func Ones(row, column int) Matrix {
 	return Matrix{slice: slice}
 }
 
+
+//Randomize randomizes m to random values
+func (m Matrix) Randomize() Matrix {
+	row := m.NumberOfRows()
+	column := m.NumberOfColumns()
+	for i := 0; i < row; i++ {
+		for j := 0; j < column; j++ {
+			m.slice[i][j] = rand.Float64() * 000.3
+		}
+	}
+	return m
+}
+
+//RandomValuedMatrix returns a row*column random valued matrix.
+func RandomValuedMatrix(row, column int) Matrix {
+	m := Matrix{}
+	for i := 0; i < row; i++ {
+		for j := 0; j < column; j++ {
+			m.slice[i][j] = rand.Float64() * 000.3
+		}
+	}
+	return m
+}
 //Add performs elementary matrix addition
 func (m Matrix) Add(mat Matrix) Matrix {
 	var product Matrix
