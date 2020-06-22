@@ -127,6 +127,15 @@ func RandomValuedMatrix(row, column int) Matrix {
 	}
 	return m
 }
+
+//FromArray returns a matrix from array
+func FromArray(arr []float64) Matrix {
+	m := Zeros(len(arr), 1)
+	for i := 0; i < len(arr); i++ {
+		m.slice[i][0] = arr[0]
+	}
+	return m
+}
 //Add performs elementary matrix addition
 func (m Matrix) Add(mat Matrix) Matrix {
 	var product Matrix
