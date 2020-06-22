@@ -104,6 +104,16 @@ func Ones(row, column int) Matrix {
 	return Matrix{slice: slice}
 }
 
+//AllSameNumber returns a row * column matrix of number.
+func AllSameNumber(row, column int, number float64) Matrix {
+	slice := make([][]float64, row)
+	for _, r := range slice {
+		for j := range r {
+			r[j] = number
+		}
+	}
+	return Matrix{slice: slice}
+}
 
 //Randomize randomizes m to random values
 func (m Matrix) Randomize() Matrix {
