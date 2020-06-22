@@ -422,5 +422,5 @@ func Sigmoid(x float64) float64 {
 
 //SigmoidPrime returns the derivative of the Sigmoid. 
 func SigmoidPrime(x float64) float64 {
-	return sigmoid(x) * (1 - sigmoid(x))
+	return Sigmoid(x) * (1 - Sigmoid(x))
 }
