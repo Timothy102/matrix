@@ -87,13 +87,15 @@ func (m Matrix) Randomize() Matrix {
 //RandomValuedMatrix returns a row*column random valued matrix.
 func RandomValuedMatrix(row, column int) Matrix {
 	rand.Seed(time.Now().UnixNano())
-	m := Zeros(row, column)
+	slc := make([][]float64, row)
 	for i := 0; i < row; i++ {
+		sl := make([]float64, column)
 		for j := 0; j < column; j++ {
-			m.slice[i][j] = rand.Float64()
+			sl[j] = randFloats(row * column)[i*j]
+			slc[i] = sl
 		}
 	}
-	return m
+	return Matrix{slice: slc}
 }
 func randFloats(n int) []float64 {
 	rand.Seed(time.Now().UnixNano())
