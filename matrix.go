@@ -192,6 +192,15 @@ func MatrixFromValues(row, column int, values []float64) Matrix {
 	return Matrix{slice: slice}
 }
 
+//Sigmoid returns sigmoid of x.
+func Sigmoid(x float64) float64 {
+	return 1 / (1+ math.Exp(-x))
+}
+
+//SigmoidPrime returns the sigmoid derivative of x.
+func SigmoidPrime(x float64) float64 {
+	return Sigmoid(x) * (1- Sigmoid(x))
+}
 //Add performs elementary matrix addition
 func (m Matrix) Add(mat Matrix) Matrix {
 	var product Matrix
