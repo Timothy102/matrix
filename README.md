@@ -23,7 +23,7 @@ import name "github.com/timothy102/matrix"
 ```
 
 # Usage
-Let's take a look at a simple matrix addition
+Let's take a look at simple matrix addition. 
  ```
  slice1:=[][]float64{
   {3.0,4.0,3.0},
@@ -39,12 +39,9 @@ Let's take a look at a simple matrix addition
   mat2:=matrix.NewMatrix(slice2,3,2)
   
  //you can also invoke the matrix struct itself of course.
- //mat:=matrix.Matrix{}
  
-  //Addition is simple
   result:=mat1.Add(mat2)
 
-  //PrintByRow will print the matrix by row if you wish to see it in full display.
   result.PrintByRow()
   
  ```
