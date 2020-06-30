@@ -7,15 +7,8 @@ A linear-algebra based Go library for matrices, vectors, as well as the Gram-Sch
 This Go Linear Algebra Library is based on the popular Mathematics for Machine Learning Specialization on Coursera. It involves classic methods of vector and matrix operations, such as dot and inner product, and some tougher challenges, such as finding the eigenvectors of a given matrix or the Gram-Schmidt process.
 
 
-I hope this library offers you to dig deeper into the world of linear algebra and to apply it to some cool machine learning concepts.
-Looking forward for feedback!
 
-
-
-
-
-Let's take a look at some initializing concepts.
-
+# Installation
 Downloading the package should be fairly simple. Run the code below in your directory terminal.
 ```
 go get github.com/timothy102/matrix
@@ -28,6 +21,8 @@ If you prefer not to write matrix all the time or for some other reason you want
 ```
 import name "github.com/timothy102/matrix"
 ```
+
+# Usage
 Let's take a look at a simple matrix addition
  ```
  slice1:=[][]float64{
@@ -40,10 +35,8 @@ Let's take a look at a simple matrix addition
   {5.4,6.5,7.6},
   }
 
-  mat1,err:=matrix.NewMatrix(slice1,3,2)
-  //do error handling
-  mat2,err:=matrix.NewMatrix(slice2,3,2)
-  //do error handling
+  mat1:=matrix.NewMatrix(slice1,3,2)
+  mat2:=matrix.NewMatrix(slice2,3,2)
   
  //you can also invoke the matrix struct itself of course.
  //mat:=matrix.Matrix{}
@@ -72,3 +65,9 @@ Let's take a look at a simple matrix addition
  ```
  [4.0,8.0,6.4]
  ```
+ 
+ 
+I hope this library offers you to dig deeper into the world of linear algebra and to apply it to some cool machine learning concepts.
+Looking forward for feedback!
+ 
+ 
