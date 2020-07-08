@@ -1,5 +1,4 @@
-//Package matrix implements matrix and vector operations along with some difficult methods, the Gram-Schmidt process, eigenvector calculation and more.
-
+//Package matrix implements matrix and vector operations along with some difficult methods such as the Gram-Schmidt process, Einstein summation convention, eigenvector calculation and more.
 package matrix
 
 import (
