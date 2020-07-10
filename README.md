@@ -1,5 +1,5 @@
 # matrix
-A linear-algebra based Go library for matrices, vectors, as well as the Gram-Schmidt process and more.
+A linear-algebra based Go library for matrices, vectors, as well as the Gram-Schmidt process,Einstein summation convention and more.
 
 
 [![GoDoc](https://godoc.org/github.com/Timothy102/matrix?status.svg)](https://godoc.org/github.com/Timothy102/matrix)
