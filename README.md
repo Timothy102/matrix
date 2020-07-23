@@ -26,8 +26,8 @@ import name "github.com/timothy102/matrix"
 Let's take a look at simple matrix addition. 
  ```go
 
-  m1 :=matrix.RandomMatrix(5,5)
-  m2 :=matrix.RandomMatrix(5,5) 
+  m1 :=matrix.RandomMatrix(3,2)
+  m2 :=matrix.RandomMatrix(3,2) 
   result :=m1.Add(m2)
 
   result.PrintByRow()
