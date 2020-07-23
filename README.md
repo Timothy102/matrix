@@ -25,22 +25,10 @@ import name "github.com/timothy102/matrix"
 # Usage
 Let's take a look at simple matrix addition. 
  ```go
- slice1:=[][]float64{
-  {3.0,4.0,3.0},
-  {4.0,2.0,1.0},
-  }
 
- slice2:=[][]float64{
-  {4.3,0.2,2.3},
-  {5.4,6.5,7.6},
-  }
-
-  mat1:=matrix.NewMatrix(slice1,3,2)
-  mat2:=matrix.NewMatrix(slice2,3,2)
-  
- //you can also invoke the matrix struct itself of course.
- 
-  result:=mat1.Add(mat2)
+  m1 :=matrix.RandomMatrix(5,5)
+  m2 :=matrix.RandomMatrix(5,5) 
+  result :=m1.Add(m2)
 
   result.PrintByRow()
   
