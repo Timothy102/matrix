@@ -10,21 +10,21 @@ This Go Linear Algebra Library is based on the popular Mathematics for Machine L
 
 # Installation
 Downloading the package should be fairly simple. Run the code below in your directory terminal.
-```
+```go
 go get github.com/timothy102/matrix
 ```
 Once you have done that, import the package in your go file.
-```
+```go
 import "github.com/timothy102/matrix"
 ```
 If you prefer not to write matrix all the time or for some other reason you want to change the name, type this.
-```
+```go
 import name "github.com/timothy102/matrix"
 ```
 
 # Usage
 Let's take a look at simple matrix addition. 
- ```
+ ```go
  slice1:=[][]float64{
   {3.0,4.0,3.0},
   {4.0,2.0,1.0},
@@ -46,7 +46,7 @@ Let's take a look at simple matrix addition.
   
  ```
  And the output:
- ```
+ ```go
   [[7.2,4.2,5.3]
   [9.4,8.5,8.6]]
   
@@ -54,12 +54,12 @@ Let's take a look at simple matrix addition.
  
  Same applies for vectors.
  
- ```
+ ```go
  vector:=NewVector([]float64{2.0,4.0,3.2})
  vector.MultipliedByScalar(2.0)
  ```
  Output:
- ```
+ ```go
  [4.0,8.0,6.4]
  ```
  
