@@ -1,5 +1,0 @@
-package: github.com/timothy102/matrix
-homepage: https://github.com/timothy102/matrix
-import: []
-testImport:
-- package: github.com/timothy102/matrix
