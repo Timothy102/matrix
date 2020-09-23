@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"math"
+	"math/rand"
 )
 
 type Vector struct {
@@ -18,6 +19,24 @@ func NewVector(slice []float64) Vector {
 // PrintVector prints the vector components
 func PrintVector(vec Vector) {
 	fmt.Println(vec.row)
+}
+
+//VecToArray returns a slice of vector elements.
+func VecToArray(vec Vector) []float64 {
+	slice := make([]float64, len(vec.row))
+	for i := range vec.row {
+		slice = append(slice, vec.row[i])
+	}
+	return slice
+}
+
+//RandomVector returns a random valued vector.
+func RandomVector(size int) Vector {
+	slice := make([]float64, size)
+	for i := 0; i < size; i++ {
+		slice = append(slice, rand.Float64()/0.3)
+	}
+	return NewVector(slice)
 }
 
 // InnerProduct returns the inner product of two vectors via the matrix.
