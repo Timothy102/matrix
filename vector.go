@@ -125,6 +125,14 @@ func (v Vector) SubstractMany(vectors []Vector) Vector {
 	return resultVector
 }
 
+//Map maps the vector by with the function
+func (vec Vector) Map(f func(float64) float64) Vector {
+	for i := range vec.row {
+		vec.row[i] = f(vec.row[i])
+	}
+	return vec
+}
+
 //GetLength returns the length of a vector.
 func (v Vector) GetLength() float64 {
 	var result float64
