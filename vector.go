@@ -125,12 +125,39 @@ func (v Vector) SubstractMany(vectors []Vector) Vector {
 	return resultVector
 }
 
-//Map maps the vector by with the function
-func (vec Vector) Map(f func(float64) float64) Vector {
-	for i := range vec.row {
-		vec.row[i] = f(vec.row[i])
+// VecZeros returns a vector of zeros
+func VecZeros(size int) Vector {
+	slc := make([]float64, size)
+	for i := 0; i < size; i++ {
+		slc = append(slc, 0)
 	}
-	return vec
+	return Vector{row: slc}
+}
+
+// VecOnes returns a vector of zeros
+func VecOnes(size int) Vector {
+	slc := make([]float64, size)
+	for i := 0; i < size; i++ {
+		slc = append(slc, 1)
+	}
+	return Vector{row: slc}
+}
+
+// VecAllSameNumber returns a vector of zeros
+func VecAllSameNumber(size int, number float64) Vector {
+	slc := make([]float64, size)
+	for i := 0; i < size; i++ {
+		slc = append(slc, number)
+	}
+	return Vector{row: slc}
+}
+
+//Map maps the vector by with the function
+func (v Vector) Map(f func(float64) float64) Vector {
+	for i := range v.row {
+		v.row[i] = f(v.row[i])
+	}
+	return v
 }
 
 //GetLength returns the length of a vector.
