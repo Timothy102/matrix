@@ -7,6 +7,7 @@ import (
 	"math/rand"
 )
 
+//Vector type
 type Vector struct {
 	row []float64
 }
@@ -51,12 +52,9 @@ func InnerProduct(matrix Matrix, vector1, vector2 Vector) float64 {
 	return vector2.DotProduct(product)
 }
 
+//NumberOfElements returns the number of elements.
 func (v Vector) NumberOfElements() int {
-	var sum int
-	for i := 0; i < len(v.row); i++ {
-		sum += i
-	}
-	return sum
+	return len(v.row)
 }
 
 // Slice returns vector.slice.

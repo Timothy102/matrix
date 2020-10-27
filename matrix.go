@@ -178,8 +178,8 @@ func AllSameNumber(row, column int, number float64) Matrix {
 	return Matrix{slice: b}
 }
 
-//MatrixFromValues returns a matrix from a set of values
-func MatrixFromValues(row, column int, values []float64) Matrix {
+//FromValues returns a matrix from a set of values
+func FromValues(row, column int, values []float64) Matrix {
 	slice := make([][]float64, row)
 	for i := range values {
 		if (i+1)%column == 0 {
@@ -193,13 +193,14 @@ func MatrixFromValues(row, column int, values []float64) Matrix {
 
 //Sigmoid returns sigmoid of x.
 func Sigmoid(x float64) float64 {
-	return 1 / (1+ math.Exp(-x))
+	return 1 / (1 + math.Exp(-x))
 }
 
 //SigmoidPrime returns the sigmoid derivative of x.
 func SigmoidPrime(x float64) float64 {
-	return Sigmoid(x) * (1- Sigmoid(x))
+	return Sigmoid(x) * (1 - Sigmoid(x))
 }
+
 //Add performs elementary matrix addition
 func (m Matrix) Add(mat Matrix) Matrix {
 	var product Matrix
