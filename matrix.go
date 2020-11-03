@@ -7,6 +7,8 @@ import (
 	"math"
 	"math/rand"
 	"time"
+
+	"github.com/timothy102/matrix"
 )
 
 //Matrix type does matrix math
@@ -16,7 +18,6 @@ type Matrix struct {
 
 //NewMatrix returns a matrix and an error
 func NewMatrix(slice [][]float64) Matrix {
-	mat := Matrix{slice: slice}
 	rows := sliceRows(slice)
 	columns := sliceColumns(slice)
 
@@ -24,7 +25,7 @@ func NewMatrix(slice [][]float64) Matrix {
 		log.Fatalf("This is not a matrix. Please, enter a proper number of elements.")
 	}
 
-	return mat
+	return Matrix{slice: slice}
 }
 
 //helper functions
@@ -199,6 +200,21 @@ func Sigmoid(x float64) float64 {
 //SigmoidPrime returns the sigmoid derivative of x.
 func SigmoidPrime(x float64) float64 {
 	return Sigmoid(x) * (1 - Sigmoid(x))
+}
+
+//Matmul does the matrix multiplication. A's rows must match B's columns
+func Matmul(a, b matrix.Matrix) matrix.Matrix {
+	result := matrix.RandomValuedMatrix(a.NumberOfRows(), b.NumberOfColumns())
+	for i := 0; i < a.NumberOfRows(); i++ {
+		for j := 0; j < b.NumberOfColumns(); j++ {
+			summa := 0.0
+			for k := 0; k < a.NumberOfColumns(); k++ {
+				summa += a.Slice()[i][k] * b.Slice()[k][j]
+			}
+			result.Slice()[i][j] = summa
+		}
+	}
+	return result
 }
 
 //Add performs elementary matrix addition
