@@ -7,7 +7,6 @@ import (
 	"math"
 	"math/rand"
 	"time"
-
 )
 
 //Matrix type does matrix math
