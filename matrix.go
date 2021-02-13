@@ -8,7 +8,6 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/timothy102/matrix"
 )
 
 //Matrix type does matrix math
