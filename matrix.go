@@ -201,8 +201,8 @@ func SigmoidPrime(x float64) float64 {
 }
 
 //Matmul does the matrix multiplication. A's rows must match B's columns
-func Matmul(a, b matrix.Matrix) matrix.Matrix {
-	result := matrix.RandomValuedMatrix(a.NumberOfRows(), b.NumberOfColumns())
+func Matmul(a, b Matrix) Matrix {
+	result := RandomValuedMatrix(a.NumberOfRows(), b.NumberOfColumns())
 	for i := 0; i < a.NumberOfRows(); i++ {
 		for j := 0; j < b.NumberOfColumns(); j++ {
 			summa := 0.0
