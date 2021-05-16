@@ -59,5 +59,6 @@ Looking forward for feedback!
 # Contact
 
 LinkedIn : https://www.linkedin.com/in/tim-cvetko-32842a1a6/
+
 Medium : https://cvetko-tim.medium.com/
  
