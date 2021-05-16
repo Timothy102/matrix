@@ -56,3 +56,8 @@ I hope this library offers you to dig deeper into the world of linear algebra an
 Looking forward for feedback!
  
  
+# Contact
+
+LinkedIn : https://www.linkedin.com/in/tim-cvetko-32842a1a6/
+Medium : https://cvetko-tim.medium.com/
+ 
