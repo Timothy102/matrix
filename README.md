@@ -58,9 +58,6 @@ Looking forward for feedback!
  
 # Contact
 
-[LinkedIn](https://www.linkedin.com/in/tim-cvetko-32842a1a6/)
+Feel free to reach out via any of the following: [LinkedIn](https://www.linkedin.com/in/tim-cvetko-32842a1a6/), [Medium](https://cvetkotim03.medium.com/), [Gmail](tim@metawaveai.com)
 
-[Medium](https://cvetkotim03.medium.com/)
-
-[Gmail](tim@metawaveai.com)
  
